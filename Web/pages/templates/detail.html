@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <head>
+        <style type="text/css">
+            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+            :root{
+                --title: #4045c1;
+                --bgtitle: #aae8b4;
+                --error: #ff4a4a;
+            }
+            h2{
+                color:black;
+                text-align: left;
+                letter-spacing: 3px;
+                font-family: "Roboto";
+                font-weight: normal;
+            }
+            p{
+                color:black;
+                text-align: left;
+                letter-spacing: 2px;
+                font-family: "Roboto";
+                font-weight: normal;
+            }
+        </style>
+    </head>
+    <body>
+        <div className ="Detail_sta">
+            <h2>Có {{leght}} lần nhận diện được:</h2>
+            {% for detail_sta in detail_stas %}
+            <p><a href="{% url 'detail_img' detail_sta %}">{{detail_sta}}</a></p>
+            {% endfor %}
+            <a href="{% url 'statistic' %}" class="btn btn-success">Quay Lại</a>
+        </div>
+    </body>
+{% endblock %}

@@ -1,0 +1,14 @@
+cài cv2 vào python sử dụng pip install
+https://www.youtube.com/watch?v=5OgY6oCZM_E&t=2s
+pip install opencv-contrib-python
+=====================================================
+bài viết khá hay về cách hoạt động của nhận diện khuôn mặt
+https://medium.com/@ageitgey/machine-learning-is-fun-part-4-modern-face-recognition-with-deep-learning-c3cffc121d78
+=====================================================
+thư viện face_recognition
+https://github.com/ageitgey/face_recognition
+up ảnh lên google drive với code python, dùng api
+https://www.youtube.com/watch?v=JwGzHitUVcU
+
+link canvas
+https://www.canva.com/design/DAE7-Cv9ZeE/zxU77ZUWRWkUIc25klaMWA/edit

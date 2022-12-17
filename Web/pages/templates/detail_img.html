@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <head>
+        <style type="text/css">
+            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+            :root{
+                --title: #4045c1;
+                --bgtitle: #aae8b4;
+                --error: #ff4a4a;
+            }
+            img {
+                width: 600px;
+                margin: 10px;
+            }
+            p{
+                color:black;
+                text-align: left;
+                letter-spacing: 2px;
+                font-family: "Roboto";
+                font-weight: normal;
+            }
+        </style>
+    </head>
+    <body>
+        <div className ="Detail_sta_img">
+            <p><img src= {{url_detail_img}} ></p>
+            <p>{{name_img}}</p>
+            <p><a href="{% url 'detail' key_detail_img %}" class="btn btn-success">Quay lại</a></p>
+        </div>
+    </body>
+{% endblock %}

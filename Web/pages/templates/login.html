@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="with=device-with, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Login</title>
+        <style> 
+            @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+            input[type=text] {
+              width: 100%;
+              padding: 12px 20px;
+              margin: 8px 0;
+              box-sizing: border-box;
+              border: 2px solid black;
+              border-radius: 4px;
+            }
+            input[type=password] {
+              width: 100%;
+              padding: 12px 20px;
+              margin: 8px 0;
+              box-sizing: border-box;
+              border: 2px solid black;
+              border-radius: 4px;
+            }
+            input[type=submit] {
+                width: 100%;
+                background-color: #000000;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            p{
+                color:black;
+                text-align: left;
+                letter-spacing: 2px;
+                font-family: "Roboto";
+                font-weight: normal;
+            }
+            .Login{
+                background: lightblue;
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: column;
+                margin-top: 200px;
+                justify-content: center;
+                align-items: center;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div class=" Login">
+        <form method ="POST" >
+            {% csrf_token %}
+            {% for key, value in form.errors.items %}
+            {{value}}
+            {% endfor%}
+            <p><label>TÀI KHOẢN: </label></p>
+            <p>{{form.username}}</p>
+            <p><label>MẬT KHẨU: </label></p>
+            <p>{{form.password}}</p>
+            <input type="hidden" name='next' value="home/"/>
+            <input type="submit" value="ĐĂNG NHẬP"/> 
+        </form>
+        </div>
+    </body>
+</html>

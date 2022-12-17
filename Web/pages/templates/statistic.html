@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <head>
+    </head>
+    <table class="table">
+        <tbody>
+            <div className ="Statistic">
+                {% for monthname in monthnames %}
+                <tr>
+                <td><p>{{ monthname }}</p></td> 
+                <td><a href="{% url 'detail' monthname %}" class="btn btn-success">Chi tiết</a></td>
+                </tr>
+                {% endfor %}
+            </div>
+        </tbody>
+    </table>
+{% endblock %}
